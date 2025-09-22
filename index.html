@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Το πάρτυ γενεθλίων της Ελπινίκης</title>
-<meta name="description" content="Πρόσκληση για το πάρτυ γενεθλίων της μικρής Ελπινίκης με θέμα την τσούχτρα του Bob Σφουγγαράκη, στην Αράχωβα το Σάββατο 22 Νοεμβρίου 2025 στις 19:00.">
+<meta name="description" content="Πρόσκληση για το πάρτυ γενεθλίων της μικρής Ελπινίκης με θέμα Frozen, στην Αράχωβα το Σάββατο 22 Νοεμβρίου 2025 στις 19:00.">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
@@ -12,8 +12,8 @@
   body {
     margin: 0;
     font-family: 'Noto Serif', 'Times New Roman', serif;
-    background: linear-gradient(to bottom, #a8e6ff, #004e92); /* από γαλάζιο σε βαθύ μπλε */
-    color: #d63384; /* ροζ-μοβ σαν τσούχτρα */
+    background: linear-gradient(to bottom, #e0f7ff, #004080); /* παγωμένο γαλάζιο σε σκούρο μπλε */
+    color: #003366;
     text-align: center;
     position: relative;
     overflow-x: hidden;
@@ -29,7 +29,7 @@
   }
 
   h1, h2, p, #countdown span {
-    color: #d63384;
+    color: #004080;
     margin: 10px 0;
   }
 
@@ -53,9 +53,10 @@
     flex-direction: column;
     align-items: center;
     min-width: 80px;
-    background: rgba(255,192,203,0.2);
+    background: rgba(255, 255, 255, 0.3);
     padding: 10px;
     border-radius: 15px;
+    color: #002b5c;
   }
 
   #countdown span:last-child {
@@ -76,13 +77,14 @@
   }
 
   .highlight-box {
-    background-color: #ffb6c1; /* ροζ κουτάκι */
+    background-color: rgba(255,255,255,0.8);
     padding: 30px;
     border-radius: 20px;
     max-width: 600px;
     margin: 40px auto;
     font-style: italic;
-    color: #4b0082; /* σκούρο μοβ για αντίθεση */
+    color: #003366;
+    border: 2px solid #b3e0ff;
   }
 
   iframe {
@@ -102,6 +104,8 @@
   footer p {
     font-size: 2em;
     font-weight: bold;
+    color: #ffffff;
+    text-shadow: 1px 1px 4px #002b5c;
   }
 
   .contact-icons {
@@ -112,42 +116,43 @@
   }
 
   .contact-icons a {
-    color: #ff4da6;
+    color: #80dfff;
     font-size: 2em;
     transition: transform 0.2s, color 0.2s;
   }
 
   .contact-icons a:hover {
     transform: scale(1.2);
-    color: #b300b3;
+    color: #ffffff;
   }
 
-  /* Bubbles για εφέ */
-  .bubble {
+  /* Νιφάδες για εφέ */
+  .snowflake {
     position: absolute;
-    bottom: -100px;
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 50%;
-    animation: rise 20s infinite ease-in;
+    top: -10px;
+    color: #ffffff;
+    font-size: 1.5em;
+    user-select: none;
+    animation: fall linear infinite;
   }
 
-  @keyframes rise {
-    0% { transform: translateY(0) scale(1); opacity: 1; }
-    100% { transform: translateY(-120vh) scale(0.5); opacity: 0; }
+  @keyframes fall {
+    0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
   }
 </style>
 </head>
 <body>
 
 <header>
-  <img src="tsouxtra.jpg" alt="Ροζ τσούχτρα από τον Bob Σφουγγαράκη">
+  <img src="frozen_logo.png" alt="Frozen Logo">
   <h1>Το πάρτυ γενεθλίων της Ελπινίκης</h1>
   <div id="countdown"></div>
 </header>
 
 <section class="highlight-box">
   <p>
-    Η μικρή μας Ελπινίκη γίνεται κιόλας 1 έτους, και σας προσκαλούμε να το γιορτάσουμε στη μαγευτική Αράχωβα!
+    Η μικρή μας Ελπινίκη γίνεται κιόλας 1 έτους, και σας προσκαλούμε να το γιορτάσουμε στη μαγευτική Αράχωβα! ❄️
   </p>
 </section>
 
@@ -155,11 +160,11 @@
   <h2>Ημέρα & Ώρα</h2>
   <p><b>Σάββατο 22 Νοεμβρίου 2025, 19:00 μ.μ.</b></p>
   <p><b>Αράχωβα</b></p>  
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3123.296226124678!2d22.580998012795057!3d38.48080607105774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135f7da58a050109%3A0x400bd2ce2b98470!2zzpHPgc6sz4fPic6yzrEgMzIwIDA0!5e0!3m2!1sel!2sgr!4v1757538358781!5m2!1sel!2sgr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3123.296226124678!2d22.580998012795057!3d38.48080607105774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135f7da58a050109%3A0x400bd2ce2b98470!2zzpHPgc6sz4fPic6yzrEgMzIwIDA0!5e0!3m2!1sel!2sgr!4v1757538358781!5m2!1sel!2sgr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </section>
 
 <footer>
-  <p>Με αγάπη, η οικογένεια και οι φίλοι της Ελπινίκης! 🪼💜✨</p>
+  <p>Με αγάπη, η οικογένεια και οι φίλοι της Ελπινίκης! ❄️💙✨</p>
 </footer>
 
 <section>
@@ -172,15 +177,16 @@
   </div>
 </section>
 
-<!-- bubbles -->
-<div class="bubble" style="width:40px; height:40px; left:10%; animation-duration:18s;"></div>
-<div class="bubble" style="width:20px; height:20px; left:30%; animation-duration:22s;"></div>
-<div class="bubble" style="width:25px; height:25px; left:50%; animation-duration:20s;"></div>
-<div class="bubble" style="width:15px; height:15px; left:70%; animation-duration:25s;"></div>
-<div class="bubble" style="width:35px; height:35px; left:90%; animation-duration:30s;"></div>
+<!-- Snowflakes -->
+<div class="snowflake" style="left: 10%; animation-duration: 15s;">❄</div>
+<div class="snowflake" style="left: 25%; animation-duration: 18s; font-size: 2em;">❅</div>
+<div class="snowflake" style="left: 40%; animation-duration: 20s;">❆</div>
+<div class="snowflake" style="left: 60%; animation-duration: 22s; font-size: 1.2em;">❄</div>
+<div class="snowflake" style="left: 75%; animation-duration: 17s; font-size: 1.8em;">❅</div>
+<div class="snowflake" style="left: 90%; animation-duration: 25s;">❆</div>
 
 <script>
-const eventDate = new Date('2025-11-20T19:00:00');
+const eventDate = new Date('2025-11-22T19:00:00');
 function updateCountdown(){
   const now = new Date();
   const diff = eventDate - now;
