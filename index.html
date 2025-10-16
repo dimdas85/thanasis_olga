@@ -12,7 +12,7 @@
   body {
     margin: 0;
     font-family: 'Noto Serif', 'Times New Roman', serif;
-    background: linear-gradient(to bottom, #e0f7ff, #004080); /* παγωμένο γαλάζιο σε σκούρο μπλε */
+    background: linear-gradient(to bottom, #e0f7ff, #004080);
     color: #003366;
     text-align: center;
     position: relative;
@@ -20,12 +20,13 @@
   }
 
   header {
-    padding: 100px 40px;
+    padding: 100px 40px 60px 40px;
   }
 
   header img {
-    max-width: 250px;
-    margin-bottom: 20px;
+    max-width: 800px;
+    margin-bottom: 30px;
+    filter: drop-shadow(0 0 10px rgba(255,255,255,0.6));
   }
 
   h1, h2, p, #countdown span {
@@ -87,6 +88,23 @@
     border: 2px solid #b3e0ff;
   }
 
+  .about-arachova {
+    background-color: rgba(173, 216, 230, 0.3);
+    border-top: 2px solid #b3e0ff;
+    border-bottom: 2px solid #b3e0ff;
+    padding: 40px 20px;
+    max-width: 700px;
+    margin: 0 auto;
+    border-radius: 20px;
+  }
+
+  .about-arachova p {
+    color: #003366;
+    font-size: 1.2em;
+    line-height: 1.8;
+    margin-top: 10px;
+  }
+
   iframe {
     margin-top: 20px;
     border-radius: 15px;
@@ -126,7 +144,7 @@
     color: #ffffff;
   }
 
-  /* Νιφάδες για εφέ */
+  /* Νιφάδες */
   .snowflake {
     position: absolute;
     top: -10px;
@@ -140,6 +158,36 @@
     0% { transform: translateY(0) rotate(0deg); opacity: 1; }
     100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
   }
+  
+  .about-arachova {
+  background-color: rgba(173, 216, 230, 0.3);
+  border-top: 2px solid #b3e0ff;
+  border-bottom: 2px solid #b3e0ff;
+  padding: 40px 20px;
+  max-width: 700px;
+  margin: 0 auto;
+  border-radius: 20px;
+}
+
+.about-arachova h2 {
+  color: #003366;
+  margin-bottom: 20px;
+}
+
+.about-arachova p {
+  color: #003366;
+  font-size: 1em;
+  line-height: 1.8;
+  margin-top: 10px;
+}
+
+.arachova-img {
+  max-width: 100%;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 15px rgba(0, 64, 128, 0.4);
+}
+
 </style>
 </head>
 <body>
@@ -156,12 +204,23 @@
   </p>
 </section>
 
+
 <section>
   <h2>Ημέρα & Ώρα</h2>
   <p><b>Σάββατο 22 Νοεμβρίου 2025, 19:00 μ.μ.</b></p>
   <p><b>Αράχωβα</b></p>  
   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3123.296226124678!2d22.580998012795057!3d38.48080607105774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135f7da58a050109%3A0x400bd2ce2b98470!2zzpHPgc6sz4fPic6yzrEgMzIwIDA0!5e0!3m2!1sel!2sgr!4v1757538358781!5m2!1sel!2sgr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </section>
+
+<section class="about-arachova">
+  <h2>Λίγα λόγια για την Αράχωβα</h2>
+  <img src="arachova.jpg" alt="Αράχωβα" class="arachova-img">
+  <p>
+    Η Αράχωβα, χτισμένη στις πλαγιές του Παρνασσού, είναι ένα γραφικό ορεινό χωριό γεμάτο ζωή και παραδοσιακή ομορφιά.
+    Τα λιθόστρωτα δρομάκια της, τα πέτρινα σπίτια και η ζεστή φιλοξενία δημιουργούν ένα σκηνικό βγαλμένο από παραμύθι.
+    Τον χειμώνα, το χιόνι σκεπάζει το χωριό και μετατρέπει την Αράχωβα σε έναν μικρό «παγωμένο παράδεισο», ιδανικό για ένα Frozen πάρτυ!
+  </p>
+</section> 
 
 <footer>
   <p>Με αγάπη, η οικογένεια και οι φίλοι της Ελπινίκης! ❄️💙✨</p>
