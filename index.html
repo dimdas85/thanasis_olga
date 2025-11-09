@@ -1,281 +1,287 @@
 <!DOCTYPE html>
 <html lang="el">
 <head>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Το πάρτυ γενεθλίων της Ελπινίκης</title>
-<meta name="description" content="Πρόσκληση για το πάρτυ γενεθλίων της μικρής Ελπινίκης με θέμα Frozen, στην Αράχωβα το Σάββατο 22 Νοεμβρίου 2025 στις 19:00.">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
+<title>Θανάσης & Όλγα</title>
 <style>
   body {
-    margin: 0;
-    font-family: 'Noto Serif', 'Times New Roman', serif;
-    background: linear-gradient(to bottom, #e0f7ff, #004080);
-    color: #003366;
-    text-align: center;
-    position: relative;
-    overflow-x: hidden;
-  }
+  margin: 0;
+  font-family: 'Noto Serif', 'Times New Roman', serif;
+  background: linear-gradient(to bottom, #fffdf9, #fffaf6);
+  color: #6d6a59;
+  text-align: center;
+  position: relative;
+  overflow-x: hidden;
+}
 
-  header {
-    padding: 100px 40px 60px 40px;
-  }
+/* 🌸 Κινούμενα λουλουδάκια που πέφτουν */
+.flower {
+  position: absolute;
+  top: -10px;
+  color: #d4af37;
+  font-size: 1.5em;
+  user-select: none;
+  animation: fall linear infinite;
+  opacity: 0.9;
+}
 
-  header img {
-    max-width: 800px;
-    margin-bottom: 30px;
-    filter: drop-shadow(0 0 10px rgba(255,255,255,0.6));
-  }
+@keyframes fall {
+  0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+}
 
-  h1, h2, p, #countdown span {
-    color: #004080;
-    margin: 10px 0;
-  }
+header, section, footer {
+  position: relative;
+  z-index: 1;
+}
 
-  h1 { font-size: 3em; }
-  h2 { font-size: 2em; }
-  p { font-size: 1.3em; line-height: 1.6; }
+header {
+  padding: 80px 20px;
+}
 
-  /* Αντίστροφη μέτρηση */
+h1, h2, p, #countdown span {
+  color: #7b715b;
+  font-family: 'Noto Serif', 'Times New Roman', serif;
+  margin: 10px 0;
+}
+
+h1 { font-size: 3em; color: #a6846a; }
+h2 { font-size: 2em; color: #8b7b68; }
+p { font-size: 1.3em; }
+
+#countdown {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  font-size: 2.5em;
+  margin-top: 30px;
+  flex-wrap: nowrap;
+}
+
+#countdown div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 80px;
+}
+
+#countdown span:first-child {
+  color: #a6846a;
+}
+
+#countdown span:last-child {
+  font-size: 0.6em;
+  margin-top: 5px;
+  color: #b9a38f;
+}
+
+@media (max-width: 600px) {
   #countdown {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    font-size: 2.5em;
-    margin-top: 30px;
-    flex-wrap: wrap;
-    text-align: center;
+    font-size: 1.2rem;
+    gap: 8px;
+    margin-top: 40px;
   }
+}
 
-  #countdown div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-width: 80px;
-    background: rgba(255, 255, 255, 0.3);
-    padding: 10px;
-    border-radius: 15px;
-    color: #002b5c;
-  }
-
-  #countdown span:last-child {
-    font-size: 0.6em;
-    margin-top: 5px;
-  }
-
-  @media (max-width: 600px) {
-    #countdown {
-      font-size: 1.2rem;
-      gap: 12px;
-      margin-top: 40px;
-    }
-  }
-
-  section {
-    padding: 40px 20px;
-  }
-
-  .highlight-box {
-    background-color: rgba(255,255,255,0.8);
-    padding: 30px;
-    border-radius: 20px;
-    max-width: 600px;
-    margin: 40px auto;
-    font-style: italic;
-    color: #003366;
-    border: 2px solid #b3e0ff;
-  }
-
-  .about-arachova {
-    background-color: rgba(173, 216, 230, 0.3);
-    border-top: 2px solid #b3e0ff;
-    border-bottom: 2px solid #b3e0ff;
-    padding: 40px 20px;
-    max-width: 700px;
-    margin: 0 auto;
-    border-radius: 20px;
-  }
-
-  .about-arachova p {
-    color: #003366;
-    font-size: 1.2em;
-    line-height: 1.8;
-    margin-top: 10px;
-  }
-
-  iframe {
-    margin-top: 20px;
-    border-radius: 15px;
-    border: none;
-    width: 90%;
-    max-width: 500px;
-    height: 300px;
-  }
-
-  footer {
-    padding: 20px;
-    margin-top: 30px;
-  }
-
-  footer p {
-    font-size: 2em;
-    font-weight: bold;
-    color: #ffffff;
-    text-shadow: 1px 1px 4px #002b5c;
-  }
-
-  .contact-icons {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    margin-top: 15px;
-  }
-
-  .contact-icons a {
-    color: #80dfff;
-    font-size: 2em;
-    transition: transform 0.2s, color 0.2s;
-  }
-
-  .contact-icons a:hover {
-    transform: scale(1.2);
-    color: #ffffff;
-  }
-
-  /* Νιφάδες */
-  .snowflake {
-    position: absolute;
-    top: -10px;
-    color: #ffffff;
-    font-size: 1.5em;
-    user-select: none;
-    animation: fall linear infinite;
-  }
-
-  @keyframes fall {
-    0% { transform: translateY(0) rotate(0deg); opacity: 1; }
-    100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
-  }
-  
-  .about-arachova {
-  background-color: rgba(173, 216, 230, 0.3);
-  border-top: 2px solid #b3e0ff;
-  border-bottom: 2px solid #b3e0ff;
+section {
   padding: 40px 20px;
-  max-width: 700px;
-  margin: 0 auto;
+}
+
+section.invite-text,
+section.honeymoon {
+  background-color: #fff4f5;
+  border: 1px solid #f0d9da;
   border-radius: 20px;
+  max-width: 600px;
+  margin: 40px auto;
+  color: #7b715b;
+  padding: 30px;
 }
 
-.about-arachova h2 {
-  color: #003366;
-  margin-bottom: 20px;
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
 }
 
-.about-arachova p {
-  color: #003366;
-  font-size: 1em;
-  line-height: 1.8;
-  margin-top: 10px;
-}
-
-.arachova-img {
-  max-width: 100%;
+.gallery img {
+  width: 300px;
+  height: 300px;
   border-radius: 15px;
-  margin-bottom: 20px;
-  box-shadow: 0 0 15px rgba(0, 64, 128, 0.4);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  object-fit: cover;
 }
 
+iframe {
+  margin-top: 20px;
+  border-radius: 15px;
+  border: none;
+  width: 90%;
+  max-width: 500px;
+  height: 300px;
+}
+
+footer {
+  padding: 20px;
+  margin-top: 30px;
+  color: #8b7b68;
+}
+
+form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, select, textarea {
+  padding: 12px;
+  border-radius: 15px;
+  border: 1px solid #cdbdae;
+  font-family: 'Noto Serif', 'Times New Roman', serif;
+  background-color: #fffefc;
+  color: #6d6a59;
+}
+
+button {
+  padding: 15px;
+  border: none;
+  border-radius: 20px;
+  background: #bba58a;
+  color: #fff;
+  font-family: 'Noto Serif', serif;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1.1em;
+}
+
+button:hover {
+  background: #c7b49d;
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 15px;
+}
+
+.contact-icons a {
+  color: #a6846a;
+  font-size: 2em;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.contact-icons a:hover {
+  transform: scale(1.2);
+  color: #e79ca9;
+}
 </style>
 </head>
 <body>
 
 <header>
-  <img src="frozen_logo.jpg" alt="Frozen Logo">
-  <h1>Το πάρτυ γενεθλίων της Ελπινίκης</h1>
+  <h1>Θανάσης & Όλγα</h1>
   <div id="countdown"></div>
 </header>
 
-<section class="highlight-box">
-  <p>
-    Η μικρή μας Ελπινίκη γίνεται κιόλας 1 έτους, και σας προσκαλούμε να το γιορτάσουμε στη μαγευτική Αράχωβα! ❄️
+<section class="invite-text">
+  <p style="font-style: italic;">
+    Ναι, ναι... είπαμε το «ναι» και πάμε Δημαρχείο! <br><br>
+    Μην αγχώνεστε όμως – εκεί δεν χρειάζεται να έρθετε! (Θα είναι κάτι γρήγορο, με δύο υπογραφές και πολλή γραφειοκρατία...)<br><br>
+    Αλλά τώρα... το γλέντι αρχίζει στα σοβαρά!<br><br>
+    Έλα να χορέψεις, να πιεις, να γελάσεις και να μας κάνεις να ξεχάσουμε το τυπικό!
   </p>
 </section>
-
 
 <section>
   <h2>Ημέρα & Ώρα</h2>
-  <p><b>Σάββατο 22 Νοεμβρίου 2025, 19:00 μ.μ.</b></p>
-  <p><b>Αράχωβα</b></p>  
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3123.296226124678!2d22.580998012795057!3d38.48080607105774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135f7da58a050109%3A0x400bd2ce2b98470!2zzpHPgc6sz4fPic6yzrEgMzIwIDA0!5e0!3m2!1sel!2sgr!4v1757538358781!5m2!1sel!2sgr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <p><b>Σάββατο 6 Δεκεμβρίου 2025, 19:30</b></p>
+  <p><b>Εστιατόριο "Μπαλκόνι στις Κυκλάδες"</b></p>
+  <p>Οδός Παύλου Μελά 13 & Αναπήρων Πολέμου, Καρέας – Βύρωνας</p>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3146.461800496964!2d23.76980797720965!3d37.94300190244945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1962cdf8bff9b%3A0x258cbed44d47af80!2zzpzOoM6RzpvOms6fzp3OmSDOo86kzpnOoyDOms6lzprOm86RzpTOlc6j!5e0!3m2!1sel!2sgr!4v1762683906552!5m2!1sel!2sgr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </section>
 
-<section class="about-arachova">
-  <h2>Λίγα λόγια για την Αράχωβα</h2>
-  <img src="arachova.jpg" alt="Αράχωβα" class="arachova-img">
-  <p>
-    Η Αράχωβα, χτισμένη στις πλαγιές του Παρνασσού, είναι ένα γραφικό ορεινό χωριό γεμάτο ζωή και παραδοσιακή ομορφιά.
-    Τα λιθόστρωτα δρομάκια της, τα πέτρινα σπίτια και η ζεστή φιλοξενία δημιουργούν ένα σκηνικό βγαλμένο από παραμύθι.
-    Τον χειμώνα, το χιόνι σκεπάζει το χωριό και μετατρέπει την Αράχωβα σε έναν μικρό «παγωμένο παράδεισο», ιδανικό για ένα Frozen πάρτυ!
-  </p>
-</section> 
-
-<footer>
-  <p>Με αγάπη, η οικογένεια και οι φίλοι της Ελπινίκης! ❄️💙✨</p>
-</footer>
-
 <section>
-  <h2>Επικοινωνία</h2>
-  <div class="contact-icons">
-    <a href="tel:+306982267310" title="Καλέστε τον Ρομπέρτο"><i class="fas fa-phone"></i></a>
-    <a href="mailto:robert_22_man@yahoo.gr" title="Στείλτε email στον Ρομπέρτο"><i class="fas fa-envelope"></i></a>
-    <a href="https://www.facebook.com/robert.drako" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
-    <a href="https://www.instagram.com/drakorobert/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+  <div class="gallery">
+    <img src="balkoni1.jpg" alt="photo 1">
+    <img src="balkoni2.jpg" alt="photo 2">
+    <img src="balkoni3.jpg" alt="photo 3">
   </div>
 </section>
 
-<!-- Snowflakes -->
-<div class="snowflake" style="left: 10%; animation-duration: 15s;">❄</div>
-<div class="snowflake" style="left: 25%; animation-duration: 18s; font-size: 2em;">❅</div>
-<div class="snowflake" style="left: 40%; animation-duration: 20s;">❆</div>
-<div class="snowflake" style="left: 60%; animation-duration: 22s; font-size: 1.2em;">❄</div>
-<div class="snowflake" style="left: 75%; animation-duration: 17s; font-size: 1.8em;">❅</div>
-<div class="snowflake" style="left: 90%; animation-duration: 25s;">❆</div>
+<section class="honeymoon">
+  <h2>Αν θέλεις, μπορείς να συνεισφέρεις στο ταξίδι του μέλιτος!</h2>
+  <p>Τράπεζα Πειραιώς</p>
+  <p><b>IBAN:</b> GR70 0172 1190 0051 1903 6073 131</p>
+</section>
+
+<section id="rsvp">
+  <h2>Ενημέρωσέ μας αν θα ‘σαι εκεί μέχρι 25.11.2025</h2>
+  <p>...γιατί η νύφη απειλεί να φάει όλο το γλυκό μόνη της!</p>
+  <form action="https://formspree.io/f/xovnawrp" method="POST">
+    <input type="text" name="name" placeholder="To ονοματεπώνυμό μου" required>
+    <input type="email" name="email" placeholder="Το Email μου" required>
+    <input type="number" name="guests" placeholder="Αριθμός ατόμων" min="1" max="10">
+    <select name="attendance">
+      <option value="yes">Φυσικά και θα είμαι εκεί! 😊</option>
+      <option value="maybe">Ίσως</option>
+      <option value="no">Δυστυχώς όχι 😔</option>
+    </select>
+    <textarea name="message" placeholder="Μήνυμα / Διατροφικές προτιμήσεις" rows="4"></textarea>
+    <button type="submit">Αποστολή</button>
+  </form>
+</section>
+
+<footer>
+  <p style="font-size:2em; font-weight:bold;">Με αγάπη, Θανάσης & Όλγα 💗✨</p>
+  <div class="contact-icons">
+    <a href="tel:+306973944778"><i class="fas fa-phone"></i></a>
+    <a href="mailto:goblows@hotmail.com"><i class="fas fa-envelope"></i></a>
+    <a href="https://www.facebook.com/ntamanis.athanasios" target="_blank"><i class="fab fa-facebook"></i></a>
+    <a href="https://www.instagram.com/ntamanis/" target="_blank"><i class="fab fa-instagram"></i></a>
+  </div>
+</footer>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
 <script>
-const eventDate = new Date('2025-11-22T19:00:00');
+const eventDate = new Date('2025-12-06T19:30:00');
 function updateCountdown(){
   const now = new Date();
   const diff = eventDate - now;
   if(diff <= 0){ 
-    document.getElementById('countdown').textContent = 'Σήμερα κάνω πάρτυ!'; 
+    document.getElementById('countdown').textContent = 'Ήρθε η μεγάλη μέρα! 💍'; 
     return; 
   }
   const d = Math.floor(diff/(1000*60*60*24));
   const h = Math.floor((diff/(1000*60*60))%24);
   const m = Math.floor((diff/(1000*60))%60);
   const s = Math.floor((diff/1000)%60);
-
-  const numbers = [d,h,m,s];
   const labels = ['ημέρες','ώρες','λεπτά','δευτερόλεπτα'];
-
   let html = '';
-  for(let i=0;i<4;i++){
-    html += `
-      <div>
-        <span>${numbers[i]}</span>
-        <span>${labels[i]}</span>
-      </div>
-    `;
-  }
-
+  [d,h,m,s].forEach((num,i)=>{
+    html += `<div><span>${num}</span><span>${labels[i]}</span></div>`;
+  });
   document.getElementById('countdown').innerHTML = html;
 }
 updateCountdown();
 setInterval(updateCountdown,1000);
 </script>
+
+
+<!-- Λουλουδάκια που πέφτουν -->
+<div class="flower" style="left: 5%; animation-duration: 18s;">🌸</div>
+<div class="flower" style="left: 20%; animation-duration: 22s; font-size: 1.4em;">💮</div>
+<div class="flower" style="left: 35%; animation-duration: 25s;">🌼</div>
+<div class="flower" style="left: 55%; animation-duration: 19s; font-size: 1.3em;">🌺</div>
+<div class="flower" style="left: 70%; animation-duration: 24s; font-size: 1.6em;">🌸</div>
+<div class="flower" style="left: 85%; animation-duration: 26s;">💐</div>
 
 </body>
 </html>
